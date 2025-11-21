@@ -36,6 +36,7 @@ export default defineConfig([
 			prettier: prettierPlugin,
 		},
 		rules: {
+			'vue/multi-word-component-names': 'off',
 			'prettier/prettier': [
 				'error',
 				{
