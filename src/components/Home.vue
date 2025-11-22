@@ -65,8 +65,8 @@ function toggleLike(i) {
 							<Button
 								:variant="likes[i] ? 'secondary' : 'ghost'"
 								size="sm"
-								@click="toggleLike(i)"
 								class="inline-flex items-center gap-2"
+								@click="toggleLike(i)"
 							>
 								<Heart :class="likes[i] ? 'text-red-500 size-4' : 'size-4'" />
 								<span class="text-xs">{{

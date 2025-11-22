@@ -1,29 +1,29 @@
-<script setup></script>
+<script setup>
+import { onMounted } from 'vue';
+import Navbar from '@/components/layout/Navbar.vue';
+import Footer from '@/components/layout/Footer.vue';
+import HeroSection from '@/components/sections/HeroSection.vue';
+import AboutSection from '@/components/sections/AboutSection.vue';
+import SkillsSection from '@/components/sections/SkillsSection.vue';
+import ProjectsSection from '@/components/sections/ProjectsSection.vue';
+import ContactSection from '@/components/sections/ContactSection.vue';
+import practica1 from '@/components/practica1.vue';
+onMounted(() => {
+	document.documentElement.classList.add('dark');
+});
+</script>
 
 <template>
-	<div class="min-h-screen bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100">
-		<header class="border-b bg-white/60 dark:bg-slate-800/60 backdrop-blur px-4 py-3">
-			<nav class="mx-auto max-w-5xl flex items-center justify-between">
-				<div class="flex items-center gap-4">
-					<router-link to="/" class="text-lg font-semibold">Mi Portafolio</router-link>
-					<router-link
-						to="/"
-						class="text-sm text-slate-600 dark:text-slate-300/70 hover:underline"
-					>
-						Inicio
-					</router-link>
-					<router-link
-						to="/sample"
-						class="text-sm text-slate-600 dark:text-slate-300/70 hover:underline"
-					>
-						Ejemplo
-					</router-link>
-				</div>
-			</nav>
-		</header>
-
-		<main class="p-8">
-			<router-view />
+	<div class="min-h-screen bg-background text-foreground font-sans antialiased">
+		<Navbar />
+		<main class="px-4 sm:px-6 lg:px-8">
+			<HeroSection />
+			<AboutSection />
+			<SkillsSection />
+			<ProjectsSection />
+			<ContactSection />
+			<practica1 />
 		</main>
+		<Footer />
 	</div>
 </template>
