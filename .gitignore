@@ -27,7 +27,8 @@ coverage
 *.tsbuildinfo
 
 .eslintcache
-
+.kilocode
+.agent
 # Cypress
 /cypress/videos/
 /cypress/screenshots/
